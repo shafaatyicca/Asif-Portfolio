@@ -198,7 +198,7 @@ main, header, footer, nav { position: relative; z-index: 1; }
   text-transform: uppercase;
 }
 .hero-title {
-  font-size: clamp(1.5rem, 5vw, 5rem);
+  font-size: clamp(3.5rem, 5vw, 5rem);
   font-weight: 700;
   margin-bottom: 28px;
   line-height: 1.08;
