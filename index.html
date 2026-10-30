@@ -72,7 +72,7 @@
       <div class="container">
         <a class="navbar-brand logo" href="#home">Malik<span>.</span>Asif</a>
 
-        <div class="d-flex align-items-center gap-2 order-md-3">
+        <div class="d-flex align-items-center gap-3 order-md-3">
           <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark / light mode">
             <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="12" r="4" />
@@ -97,7 +97,7 @@
 
         <div class="collapse navbar-collapse order-md-2 justify-content-md-end" id="navMenu">
           <ul class="navbar-nav gap-md-3 py-3 py-md-0" id="mainNav">
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
@@ -132,11 +132,12 @@
           </div>
 
           <div class="col-lg-5">
-            <div class="vis">
-              <div class="ring">
-                <div class="ring-inner photo-fallback" data-initials="MA">
+            <div class="vis-circle-wrap">
+              <div class="vis-circle-glow"></div>
+              <div class="vis-circle-ring">
+                <div class="vis-circle-inner photo-fallback" data-initials="MA">
                   <img
-                    src="assets/profile.jfif"
+                    src="assets/profile.png"
                     alt="Portrait of Malik Asif Hameed"
                     width="720"
                     height="731"
@@ -167,45 +168,30 @@
       <section id="about" class="section">
         <div class="container">
           <p class="num">01 / About Me</p>
-          <div class="row g-5 align-items-start">
-            <div class="col-lg-4 reveal">
-              <div class="about-photo photo-fallback" data-initials="MA">
-                <img
-                  src="assets/profile.jfif"
-                  alt="Malik Asif Hameed"
-                  loading="lazy"
-                  width="720"
-                  height="731"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-            </div>
-            <div class="col-lg-8 reveal">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-12 reveal">
               <h2 class="section-title">Connecting Products with the Right Customers.</h2>
-              <p class="text-body-secondary">
+              <p class="text-body-secondary fs-5 mb-4">
                 I’m Malik Asif Hameed, a dedicated E-commerce Marketplace Specialist with professional
                 experience at Techpointzone and Melodica Music Store.
               </p>
               <p class="text-body-secondary">
                 My work centers on managing online marketplace operations, improving product presentation,
                 maintaining accurate product information, and supporting businesses selling through major
-                e-commerce platforms.
+                e-commerce platforms. With an academic background in Physics, I bring analytical thinking,
+                attention to detail, and a structured approach to solving marketplace challenges.
               </p>
-              <p class="text-body-secondary">
-                With an academic background in Physics, I bring analytical thinking, attention to detail,
-                and a structured approach to solving marketplace challenges.
-              </p>
-              <div class="row g-3 mt-2">
-                <div class="col-sm-6">
+              <div class="row g-4 mt-3">
+                <div class="col-sm-6 col-md-3">
                   <div class="tile"><small>Specialty</small><b>E-commerce Marketplaces</b></div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-md-3">
                   <div class="tile"><small>Platforms</small><b>Amazon, Noon, Carrefour</b></div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-md-3">
                   <div class="tile"><small>Education</small><b>Bachelor’s in Physics</b></div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-md-3">
                   <div class="tile"><small>Location</small><b>Islamabad, Pakistan</b></div>
                 </div>
               </div>
@@ -384,7 +370,6 @@
             <!-- Card 1 -->
             <div class="col-md-6 reveal" style="--d:0s">
               <div class="app-card h-100">
-                <!-- Apni marzi ka link href="https://..." ya href="page.html" lagayein -->
                 <a href="https://www.amazon.ae/stores/page/605F075A-4744-4FE8-81D4-AC4A743EB5A7?ingress=0&visitId=66200d47-b43e-4193-a995-560fcf1e22cc" target="_blank" rel="noopener" class="thumb d-block text-decoration-none" aria-label="Visit Amazon Marketplace Work">
                   <img src="assets/Amazon.jfif" alt="Amazon Product Listing Optimization preview" loading="lazy" onerror="this.style.display='none'" />
                   <i>Visit Project / Page →</i>
@@ -409,19 +394,19 @@
             <!-- Card 3 -->
             <div class="col-md-6 reveal" style="--d:0.2s">
               <div class="app-card h-100">
-                <a href="https://www.trendyol.ae/store/power-play-sports-m-1150799?sst=0" target="_blank" rel="noopener" class="thumb d-block text-decoration-none" aria-label="Visit Carrefour Listing Setup Work">
-                  <img src="assets/Carrefour.jfif" alt="Carrefour Product Listing Setup preview" loading="lazy" onerror="this.style.display='none'" />
+                <a href="https://www.trendyol.ae/store/power-play-sports-m-1150799?sst=0" target="_blank" rel="noopener" class="thumb d-block text-decoration-none" aria-label="Visit Trendyol Listing Setup Work">
+                  <img src="assets/trendyol.png" alt="Trendyol Product Listing Setup preview" loading="lazy" onerror="this.style.display='none'" />
                   <i>Visit Project / Page →</i>
                 </a>
-                <span class="n">Carrefour</span>
-                <h3 style="margin-bottom:8px">Carrefour Product Listing Setup</h3>
+                <span class="n">Trendyol</span>
+                <h3 style="margin-bottom:8px">Trendyol Product Listing Setup</h3>
               </div>
             </div>
 
             <!-- Card 4 -->
             <div class="col-md-6 reveal" style="--d:0.3s">
               <div class="app-card h-100">
-                <a href="https://www.trendyol.ae/store/power-play-sports-m-1150799?sst=0" target="_blank" rel="noopener" class="thumb d-block text-decoration-none" aria-label="Visit Multi-Platform E-commerce Work">
+                <a href="https://ahilapowerofhealing.com/?srsltid=AYCX9vJIsWclvIYscNGG9I-Hll77VXqXtJ-YC9MuZfiRkZyf4N1nCVRu" target="_blank" rel="noopener" class="thumb d-block text-decoration-none" aria-label="Visit Multi-Platform E-commerce Work">
                   <img src="assets/multiplateform.jfif" alt="Multi-Platform E-commerce Operations preview" loading="lazy" onerror="this.style.display='none'" />
                   <i>Visit Project / Page →</i>
                 </a>

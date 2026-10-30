@@ -1,6 +1,3 @@
-/* =========================================================
-   Malik Asif Hameed — Portfolio Scripts
-   ========================================================= */
 (function () {
   "use strict";
 
@@ -67,11 +64,13 @@
   addEventListener("load", () => setTimeout(() => $("#load")?.classList.add("h"), 250));
   setTimeout(() => $("#load")?.classList.add("h"), 2000);
 
-  /* ---------- Smooth Navigation Link Scroll (Fixes Laptop & Mobile issue) ---------- */
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  /* ---------- Smooth Navigation Link Scroll & Active State ---------- */
+  const navLinks = $$("#mainNav .nav-link");
+  
+  navLinks.forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const targetId = this.getAttribute("href");
-      if (targetId === "#") return;
+      if (!targetId || !targetId.startsWith("#")) return;
 
       const targetEl = document.querySelector(targetId);
       if (targetEl) {
@@ -84,6 +83,10 @@
           behavior: "smooth"
         });
 
+        // Set active class immediately on click
+        navLinks.forEach((l) => l.classList.remove("active"));
+        this.classList.add("active");
+
         // Close mobile collapse if open
         const menu = $("#navMenu");
         if (menu && menu.classList.contains("show")) {
@@ -94,9 +97,29 @@
     });
   });
 
-  /* ---------- Scroll Progress & Nav Styling ---------- */
+  /* ---------- Scroll Progress, Nav State & Active Link Highlighting ---------- */
   const nav = $("#nav");
   const toTop = $("#top");
+  const sections = $$("header[id], section[id]");
+
+  function updateNavOnScroll() {
+    const scrollPos = window.pageYOffset + 180;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
 
   function prog() {
     const tl = $("#tl");
@@ -119,9 +142,11 @@
     if (nav) nav.classList.toggle("s", scrollY > 20);
     if (toTop) toTop.classList.toggle("v", scrollY > 700);
     prog();
+    updateNavOnScroll();
   }, { passive: true });
 
   prog();
+  updateNavOnScroll();
 
   if (toTop) {
     toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
@@ -165,13 +190,6 @@
       });
       b.addEventListener("mouseleave", () => (b.style.transform = ""));
     });
-
-    const v = $(".vis");
-    if (v) {
-      addEventListener("scroll", () => {
-        if (scrollY < 900) v.style.transform = `translateY(${scrollY * 0.06}px)`;
-      }, { passive: true });
-    }
   }
 
   /* ---------- WhatsApp Contact Form Handler ---------- */
